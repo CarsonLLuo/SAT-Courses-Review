@@ -15,18 +15,20 @@ The notes cover various aspects of software testing, including:
 ## Repository Structure
 
 ```
-/
 ├── README.md
 ├── Week1/
+├── Week1.md
 ├── Week2/
+├── Week2.md
 ├── Week3/
-└── ... (up to Week9)
+└── Week3.md
 ```
 
 
 ## Purpose
 
 These notes are primarily for personal reference and study purposes. Feel free to use them as a supplementary resource for learning software testing concepts.
+Pull requests are welcome if you'd like to contribute to improving these notes!
 
 ---
 *Last Updated: December 2024*
