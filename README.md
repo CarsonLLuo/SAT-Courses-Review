@@ -28,6 +28,7 @@ The notes cover various aspects of software testing, including:
 ## Purpose
 
 These notes are primarily for personal reference and study purposes. Feel free to use them as a supplementary resource for learning software testing concepts.
+
 Pull requests are welcome if you'd like to contribute to improving these notes!
 
 ---
