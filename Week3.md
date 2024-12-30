@@ -901,3 +901,147 @@ Definition
 - 这些准则都试图系统地测试循环结构
 - 随着K值增加，测试复杂度也会增加
 
+### Cyclomatic Criterion [McCabe 1976] 
+
+![image-20241230163505379](Week3/image-20241230163505379.png)
+
+Representation of Paths as Vectors
+
+b1 = (a, b, c, g), b2 = (a, b, c, b, c, g), b3 = (a, b, e, f, g),
+
+b4 = (a, d, e, f, g), b5 = (a, d, f, g).
+
+p1= (a, b, c, b, e, f, g), p2=(a, b, c, b, c, b, c, g)
+
+1. 路径表示方式：
+- 每条路径用边的序号向量表示
+- 向量中的每个数字表示对应边的经过次数
+- 10个边对应向量中的10个位置
+
+2. 基本路径分析(b1-b5)：
+- b₁ = (a,b,c,g): [1,0,0,1,0,0,0,0,1,0]
+  表示经过边1,4,9各一次
+- b₂ = (a,b,c,b,c,g): [1,0,1,2,0,0,0,0,1,0]
+  表示经过边1一次,边3一次,边4两次,边9一次
+- b₃ = (a,b,e,f,g): [1,0,0,0,1,0,0,1,0,1]
+  表示经过边1,5,8,10各一次
+
+3. 复杂路径分析(p1,p2)：
+- p₁ = (a,b,c,b,e,f,g): [1,0,1,1,1,0,0,1,0,1]
+  包含更多的边的组合
+- p₂ = (a,b,c,b,c,b,c,g): [1,0,2,3,0,0,0,0,1,0]
+  表示某些边被多次经过
+
+### Cyclomatic Number
+
+Given a directed graph *G*, *n* the number of nodes in *G*, *e* the number of edges. 
+
+**Theorem**
+
+- In a strongly connected graph, all base sets of paths contains *e*-*n*+1 independent paths. This number is called the **cyclomatic** **number** and denoted by **v(G)**. 
+
+**Corollary**
+
+- In a flow graph, there are *e*-*n*+2 independent complete paths that can form a base set. This number is called the **cyclomatic complexity** of the flow graph. 
+
+**Example**
+
+The flow graph FG3 has e=10, n=7. So, it has 
+
+*e-n*+2 = 10-7+2 = 5 
+
+independent complete paths that can form a base set. 
+
+让我解释环复杂度(Cyclomatic Number)的相关概念：
+
+1. 定理（针对强连通图）：
+- 环复杂度 v(G) = e - n + 1
+- 其中：
+  * e 是边的数量
+  * n 是节点的数量
+- 这个数值表示基本路径集中独立路径的数量
+
+2. 推论（针对流图）：
+- 流图的环复杂度 = e - n + 2
+- 表示能形成基本集合的独立完整路径数量
+- 比强连通图多1是因为流图有独立的入口和出口节点
+
+3. 示例分析（FG3流图）：
+- 边数 e = 10
+- 节点数 n = 7
+- 环复杂度计算：
+  * 10 - 7 + 2 = 5
+- 意味着需要5条独立的完整路径来构成基本路径集
+
+#### Example
+
+![image-20241230163800155](Week3/image-20241230163800155.png)
+
+**Number of edges:9**
+
+**Number of nodes:7**
+
+So it has **V(G)=e-n+2=9-7+2=4** independent complete paths
+
+Independent complete Paths:
+
+**1-7**
+
+**1-2-6-1-7**
+
+**1-2-3-5-2-6-1-7**
+
+**1-2-3-4-5-2-6-1-7**
+
+V(G)=P+1=3+1=4  **P:the number of predicate node** 
+
+1. 图的基本信息：
+- 边数 e = 9
+- 节点数 n = 7
+- 谓词节点数 P = 3 (节点3是一个分支节点)
+
+2. 环复杂度计算方法：
+方法1：V(G) = e - n + 2 = 9 - 7 + 2 = 4
+方法2：V(G) = P + 1 = 3 + 1 = 4
+（两种计算方法得到相同结果）
+
+3. 独立完整路径分析：
+根据环复杂度V(G)=4，需要4条独立完整路径：
+1. 1-7 （最简单路径）
+2. 1-2-6-1-7 （包含第一个循环）
+3. 1-2-3-5-2-6-1-7 （包含第二个循环）
+4. 1-2-3-4-5-2-6-1-7 （最长路径）
+
+4. 路径特点：
+- 每条路径都是从节点1开始，到节点7结束
+- 路径长度逐渐增加
+- 每条新路径都包含了一些之前路径没有覆盖的边
+- 这4条路径构成了一个基本路径集
+
+## Cyclomatic Adequacy Criterion
+
+Definition: (McCabe, 1976)
+
+- A set P of complete paths satisfies *cyclomatic* *adequacy criterion* for testing a flow graph G, if and only if *P* contains at least one set of v(G) independent paths.
+
+Subsumption relations
+
+- Cyclomatic adequacy criterion subsumes node coverage and branch coverage criteria
+
+定义(McCabe, 1976)：
+
+- 如果一组完整路径P包含至少v(G)条独立路径
+- 那么这组路径就满足环复杂度充分性准则
+- 其中v(G)是流图G的环复杂度
+
+包含(Subsumption)关系：
+
+- 环复杂度充分性准则包含了：
+  - 节点覆盖(Node Coverage)
+  - 分支覆盖(Branch Coverage)
+
+这意味着：
+
+- 如果满足环复杂度充分性准则
+- 就一定满足节点覆盖和分支覆盖
+- 反之不成立
