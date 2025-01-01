@@ -58,9 +58,9 @@ How many fishes are there in a pond?
 - Count how many of the fishes of the second catch are marked, say 3. 
 - Can you estimate the total number of fishes in the pond? 
 
-![image-20250101155248272](Week5-Fault-Based Testing and Error-Based Testing/image-20250101155248272.png)
+![image-20250101155248272](Week5-Fault-BasedTesting-and-Error-BasedTesting/image-20250101155248272.png)
 
-![image-20250101155257184](Week5-Fault-Based Testing and Error-Based Testing/image-20250101155257184.png)
+![image-20250101155257184](Week5-Fault-BasedTesting-and-Error-BasedTesting/image-20250101155257184.png)
 
 There are about 40 fishes in the pond. 
 
@@ -134,7 +134,7 @@ The ratio *r* also used to measure software test adequacy
 
 ## Analysis of The Error-Seeding Technique
 
-![image-20250101155935727](Week5-Fault-Based Testing and Error-Based Testing/image-20250101155935727.png)
+![image-20250101155935727](Week5-Fault-BasedTesting-and-Error-BasedTesting/image-20250101155935727.png)
 
 1. 故障植入方式：
 - 采用手动植入方式
@@ -243,7 +243,7 @@ A mutant may remain alive for one of two reasons:
 
 The *mutation adequacy* of a set of test data is measured by a numerical score calculated according to the following equation:
 
-![image-20250101161039165](Week5-Fault-Based Testing and Error-Based Testing/image-20250101161039165.png)
+![image-20250101161039165](Week5-Fault-BasedTesting-and-Error-BasedTesting/image-20250101161039165.png)
 
 where 
 
@@ -413,7 +413,7 @@ end
 
 ### Analysis of The Mutation Testing Technique
 
-![image-20250101162250694](Week5-Fault-Based Testing and Error-Based Testing/image-20250101162250694.png)
+![image-20250101162250694](Week5-Fault-BasedTesting-and-Error-BasedTesting/image-20250101162250694.png)
 
 1. 故障植入方式：
 - 通过设计变异算子来模拟各种类型的故障
@@ -592,7 +592,7 @@ The implemented boundary is a parallel shift from the correct boundary
 
 The implemented boundary is a rotation of the correct boundary
 
-![image-20250101165620236](Week5-Fault-Based Testing and Error-Based Testing/image-20250101165620236.png)
+![image-20250101165620236](Week5-Fault-BasedTesting-and-Error-BasedTesting/image-20250101165620236.png)
 
 让我详细解释常见的边界错误类型和相关术语：
 
@@ -841,7 +841,7 @@ Sub-Domain B：
 计算公式：sum = ⌊(5x + 10y) * 95%⌋
 ```
 
-![image-20250101171052423](Week5-Fault-Based Testing and Error-Based Testing/image-20250101171052423.png)
+![image-20250101171052423](Week5-Fault-BasedTesting-and-Error-BasedTesting/image-20250101171052423.png)
 
 坐标系含义：
 - x轴：X产品数量
@@ -903,7 +903,7 @@ end
 
 ```
 
-![image-20250101171333681](Week5-Fault-Based Testing and Error-Based Testing/image-20250101171333681.png)
+![image-20250101171333681](Week5-Fault-BasedTesting-and-Error-BasedTesting/image-20250101171333681.png)
 
 | **Path**                    | **Path Condition**                 |
 | --------------------------- | ---------------------------------- |
@@ -973,7 +973,7 @@ A set *T* of test cases is said to be adequate according to the ***N-Border/1-Ne
 
 #### Example: Test Cases for sub-domain E
 
-![image-20250101173241460](Week5-Fault-Based Testing and Error-Based Testing/image-20250101173241460.png)
+![image-20250101173241460](Week5-Fault-BasedTesting-and-Error-BasedTesting/image-20250101173241460.png)
 
 让我解释这个子域E的测试用例示例：
 
@@ -1032,7 +1032,7 @@ A set *T* of test cases is said to adequate according to the *N-Border/N-Nearby 
 
 #### Example: N-Border/N-Nearby Test Cases
 
-![image-20250101174141752](Week5-Fault-Based Testing and Error-Based Testing/image-20250101174141752.png)
+![image-20250101174141752](Week5-Fault-BasedTesting-and-Error-BasedTesting/image-20250101174141752.png)
 
 红点表示所有测试点，包括：
 
@@ -1080,7 +1080,7 @@ Let {*D*1, *D*2,..., $D_n$} be the set of sub-domains of software S. A set *T* o
 
 ####  Example: Vertex Coverage Test Cases
 
-![image-20250101174622714](Week5-Fault-Based Testing and Error-Based Testing/image-20250101174622714.png)
+![image-20250101174622714](Week5-Fault-BasedTesting-and-Error-BasedTesting/image-20250101174622714.png)
 
 1. 顶点位置：
 - X=30和Total=200线的交点
