@@ -272,7 +272,7 @@ A quality model consists of:
 
    - **Interoperability（互操作性）**：表示软件与其他系统或软件进行交互的能力。与**复用性**和**可移植性**有正相关性，因为一个易于集成的软件通常也更易于移植和复用。
 
-## Notes on Software Quality
+## Notes on Software Quality（重点）
 
 * **Inequality**: Quality attributes are not always of equal  importance. Some quality attributes are more important  than others. 
 
@@ -314,7 +314,7 @@ A quality model consists of:
   - 这些关系可能是正向的，也可能是负向的
   - 改进一个质量属性可能会对其他属性产生影响
 
-# Why software analysis and testing is  necessary? 
+# Why software analysis and testing is  necessary? （从ISO, McCall角度想）
 
 1. **开发投入的重要性**：
 - 在软件开发中，SAT占用超过50%的开发努力和成本
