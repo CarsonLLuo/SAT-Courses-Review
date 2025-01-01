@@ -123,7 +123,7 @@ Begin
 3. 在循环体内被用于计算并重新定义
 4. 最终在输出语句中被用于计算
 
-![image-20241230175328617](Week4/image-20241230175328617.png)
+![image-20241230175328617](Week4-DataFlow/image-20241230175328617.png)
 
 左侧 - 控制流图(Control Flow Graph):
 - 显示程序的执行路径和控制结构
@@ -259,7 +259,7 @@ Definition coverage criterion的关键要点：
 
 ### Example
 
-![image-20241230180737654](Week4/image-20241230180737654.png)
+![image-20241230180737654](Week4-DataFlow/image-20241230180737654.png)
 
 The set {p1, p2} satisfies the definition coverage criteria. 
 
@@ -338,7 +338,7 @@ Use Coverage Criterion的要求：
 
 ### Example
 
-![image-20241230183423002](Week4/image-20241230183423002.png)
+![image-20241230183423002](Week4-DataFlow/image-20241230183423002.png)
 
 Three nodes have definition occurrences of variables: b, c, d.
 
@@ -429,7 +429,7 @@ else               // 路径2开始
 
 ### Example: DU Path Coverage
 
-![image-20241230185706046](Week4/image-20241230185706046.png)
+![image-20241230185706046](Week4-DataFlow/image-20241230185706046.png)
 
 The set {p1, p2} does not satisfy the DU path coverage criteria. 
 
@@ -519,7 +519,7 @@ All uses coverage criterion subsumes branch coverage criterion
 
 # Testing Interactions Between Variables
 
-![image-20241230191539391](Week4/image-20241230191539391.png)
+![image-20241230191539391](Week4-DataFlow/image-20241230191539391.png)
 
 An effective way to test the correctness of the data assigned to a variable is to check the process that the data are propagated. [Ntafos, 1984] 
 
@@ -565,7 +565,7 @@ The definition of $x_i$ on node *$n_{i}$* reaches the c-use of $x_i$ on node $n_
 
 *The variables and the nodes do not need to be distinct.*
 
-![image-20241230192035454](Week4/image-20241230192035454.png)
+![image-20241230192035454](Week4-DataFlow/image-20241230192035454.png)
 
 The concatenation of p1, p2,..., pk is called an *interaction path* for the k-du-interaction chain. 
 
